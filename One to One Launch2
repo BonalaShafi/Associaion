@@ -1,22 +1,22 @@
-package com.gqt.launch2;
+package com.gqt.launch;
 
 import com.gqt.entities1.Account;
 import com.gqt.entities1.Employee;
 
-public class Launch2 {
+public class Launch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Account a = new Account();
-		a.setAccNo(415417);
-		a.setAccName("UR");
+		a.setAccNo(675758);
+		a.setAccName("Shafi");
 		a.setAccType("savings");
 		
 		Employee emp = new Employee();
-		emp.setEmpId(1517);
-		emp.setEmpName("UR");
-		emp.setEmpAdrr("TPT");
+		emp.setEmpId(8717);
+		emp.setEmpName("Shafi");
+		emp.setEmpAdrr("Banglore");
 		
 		//performing dependency Injection using Setter
 		emp.setAcc(a);
