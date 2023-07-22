@@ -1,8 +1,8 @@
 // Main class Code
 
-package com.gqt.YASHH;
+package com.gqt.Shafi;
 
-import com.gqt.yash.*;
+import com.gqt.Shafi.*;
 
 public class Launch
 {
@@ -25,7 +25,7 @@ public class Launch
 		
 		prj2.setProjectId(13);
 		prj2.setProjectName("EFGH");
-		prj2.setProjectManager("Arun");
+		prj2.setProjectManager("Sirisha");
 		prj2.setEmployees(emp1,emp3);
 		
 		prj3.setProjectId(12);
@@ -47,7 +47,7 @@ public class Launch
 
 
 
-package com.gqt.yash;
+package com.gqt.Shafi;
 
 public class Project
 {
@@ -100,7 +100,7 @@ public void disp()
 
 
   
-package com.gqt.yash;
+package com.gqt.Shafi;
 
 public class Employee
 {
