@@ -7,8 +7,8 @@ public class Launch {
 
 	public static void main(String[] args) {
 		
-		Account a = new Account(415417,"Savings","UR");
-		Employee emp = new Employee(1517,"UR","TPT", a);
+		Account a = new Account(6578417,"Savings","Shafi");
+		Employee emp = new Employee(8717,"Shafi","Banglore", a);
 		
 		emp.disp();
 		
