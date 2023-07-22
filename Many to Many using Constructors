@@ -1,0 +1,147 @@
+// Main class Code
+
+package com.gqt.YASHH;
+
+import com.gqt.yash.*;
+
+public class Launch
+{
+
+	public static void main(String[] args)
+	{
+		Project prj1 = new Project();
+		Project prj2 = new Project();
+		Project prj3 = new Project();
+		
+		Employee emp1 = new Employee(111,"Sachin",prj1,prj2);
+		Employee emp2 = new Employee(112,"Virat",prj1,prj3);
+		Employee emp3 = new Employee(113,"Rohit",prj1,prj2,prj3);
+		
+		
+		prj1.setProjectId(12);
+		prj1.setProjectName("ABCD");
+		prj1.setProjectManager("Shafi");
+		prj1.setEmployees(emp1,emp2);
+		
+		prj2.setProjectId(13);
+		prj2.setProjectName("EFGH");
+		prj2.setProjectManager("Arun");
+		prj2.setEmployees(emp1,emp3);
+		
+		prj3.setProjectId(12);
+		prj3.setProjectName("IJKL");
+		prj3.setProjectManager("Rajesh");
+		prj3.setEmployees(emp1,emp2,emp3);
+		
+		emp1.disp();
+		emp2.disp();
+		emp3.disp();
+		
+		prj1.disp();
+		prj2.disp();
+		prj3.disp();
+		
+	}
+
+}
+
+
+
+package com.gqt.yash;
+
+public class Project
+{
+  private int projectId;
+  private String projectName;
+  private String projectManager;
+private Employee [] Employees;
+
+
+public int getProjectId() {
+	return projectId;
+}
+public void setProjectId(int projectId) {
+	this.projectId = projectId;
+}
+public String getProjectName() {
+	return projectName;
+}
+public void setProjectName(String projectName) {
+	this.projectName = projectName;
+}
+public String getProjectManager() {
+	return projectManager;
+}
+public void setProjectManager(String projectManager) {
+	this.projectManager = projectManager;
+}
+public Employee[] getEmployees() {
+	return Employees;
+}
+public void setEmployees(Employee...employees) {
+	Employees = employees;
+}
+
+public void disp()
+{
+	System.out.println("Project details");
+	   System.out.println("Project Id: "+projectId);
+	   System.out.println("Project Name: "+projectName);
+	   System.out.println("Project Manager: "+projectManager);
+	   System.out.println();
+	   for(Employee pr :Employees)
+	   {
+		   System.out.println("Employee Id: "+pr.getEmpId());
+		   System.out.println("Project Name: "+pr.getEmpName());
+	   }
+}
+	
+}
+
+
+  
+package com.gqt.yash;
+
+public class Employee
+{
+   private int empId;
+   private String empName;
+   private Project [] projects;
+   
+public Employee(int empId, String empName, Project... projects) 
+{
+	this.empId = empId;
+	this.empName = empName;
+	this.projects = projects;
+}
+
+
+public int getEmpId() {
+	return empId;
+}
+
+
+public String getEmpName() {
+	return empName;
+}
+
+
+public Project[] getProjects() {
+	return projects;
+}
+
+
+public void disp()
+   {
+	   System.out.println("Employee details");
+	   System.out.println("Employee Id: "+empId);
+	   System.out.println("Employee Name: "+empName);
+	   System.out.println();
+	   for(Project pr :projects)
+	   {
+		   System.out.println("Project Id: "+pr.getProjectId());
+		   System.out.println("Project Name: "+pr.getProjectName());
+		   System.out.println("Project Manager: "+pr.getProjectManager());
+	   }
+   }
+}
