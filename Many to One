@@ -1,0 +1,66 @@
+
+
+public class Branch 
+{
+  private int bId;
+  private String bloc;
+  public Branch(int bId,String bloc)
+  {
+	  this.bId=bId;
+	  this.bloc=bloc;
+  }
+public int getbId() 
+{
+	return bId;
+}
+
+public String getBloc()
+{
+	return bloc;
+}
+ 
+}
+
+
+
+
+public class Employee
+{
+	private int EmpId;
+	private String EmpName;
+	private Branch branch;
+	
+	public Employee(int EmpId,String EmpName, Branch branch)
+	{
+		this.EmpId=EmpId;
+		this.EmpName=EmpName;
+		this.branch=branch;
+	}
+	public void disp()
+	{
+		System.out.println("Employee Detiles:");
+	    System.out.println(EmpId+" "+EmpName);
+	    System.out.println("Branch Detiles:");
+	    System.out.println(branch.getbId()+" "+branch.getBloc());
+	    System.out.println();
+	}
+}
+
+
+package com.gqt.shafi;
+
+public class Launch {
+
+	public static void main(String[] args)
+	{
+	     Branch br = new Branch(6,"YLNK");
+		Employee emp1 = new Employee(18,"Sachin",br);
+		Employee emp2 = new Employee(23,"virat",br);
+		Employee emp3 = new Employee(34,"Dhoni",br);
+		
+		emp1.disp();
+		emp2.disp();
+		emp3.disp();
+	}
+
+}
